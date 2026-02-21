@@ -52,6 +52,42 @@ Pre-built versions can also be found on the [Releases](https://github.com/akquen
 | `preventblocks.bypass` | Allows placing blocked blocks | `op` |
 | `preventblocks.admin` | Admin permissions (reload, list) | `op` |
 
+## Config
+
+# Message shown to player when trying to place blocked block
+message: "&cYou cannot place this block here!"
+
+# List of worlds where the restriction applies (comma-separated)
+# world_the_end - default End world
+# You can add other worlds: "world_the_end,end_dimension,custom_end"
+worlds: "world,world_nether,world_the_end"
+
+# List of blocked blocks
+# Full material list: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+blocked-blocks:
+  - END_PORTAL_FRAME
+  - END_PORTAL
+  - END_GATEWAY
+  - DRAGON_EGG
+  - RESPAWN_ANCHOR
+  - BEDROCK
+  - COMMAND_BLOCK
+  - CHAIN_COMMAND_BLOCK
+  - REPEATING_COMMAND_BLOCK
+  - STRUCTURE_BLOCK
+  - BARRIER
+
+# Operation mode:
+# blacklist - blocks blocks from the list (default)
+# whitelist - only allows blocks from the list
+mode: "blacklist"
+
+# Notify admins about blocked placement attempts
+notify-admins: true
+
+# Send message to player when trying to place blocked block
+notify-player: true
+
 ## Support
 
 - 📧 Create an [Issue](https://github.com/akquenti/PreventBlocks/issues)
